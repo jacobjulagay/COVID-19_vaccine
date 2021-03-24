@@ -1,4 +1,4 @@
-## About The Project
+## About the Project
 The goal of this project is to find insights about the Covid-19 vaccine distribution and demographic. Below is an explanation of how I automated the extraction of data from different data sources.
 
 The database I used was MySQL. I decided to our host our teams database with AWS using their Relational Database Service (RDS).
