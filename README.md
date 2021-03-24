@@ -1,5 +1,5 @@
 ## About The Project
-The goal of this project is to find insights about the Covid-19 vaccine distribution and demographic. Also, I will be talking about how I automated the pulling of data from the CDC Website and Github. 
+The goal of this project is to find insights about the Covid-19 vaccine distribution and demographic. I will be talking about how I automated the extraction of data from the CDC Website and Github. 
 
 In order to store all of this data, I used MySQL. Since I am working with a team, I wanted all of us to have the same database. So I decided to learn how to host our MySQL Server onto AWS using their Relational Database Service (RDS).
 
