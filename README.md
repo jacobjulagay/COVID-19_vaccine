@@ -11,7 +11,7 @@ I used Python, Pandas, and SqlAlchemy in order fetch data from the CDC API. Once
 2. Moderna Vaccine Results - [Dataset](https://data.cdc.gov/Vaccinations/COVID-19-Vaccine-Distribution-Allocations-by-Juris/saz5-9hgg)
 3. Pfizer Vaccine Results -  [Dataset](https://data.cdc.gov/Vaccinations/COVID-19-Vaccine-Distribution-Allocations-by-Juris/b7pe-5nws)
 
-In order to obtain the 3 datasets below, I had to use Selenium because these datasets did not have any API endpoints. I used Selenium to download each dataset. Website: [Covid-19 Vaccinations in the US - Demographic ](https://covid.cdc.gov/covid-data-tracker/#vaccination-demographic)
+In order to obtain the 3 datasets below, I had to use Selenium because these datasets did not have any API endpoints. I used Selenium to download each dataset. Source: [Covid-19 Vaccinations in the US - Demographic ](https://covid.cdc.gov/covid-data-tracker/#vaccination-demographic)
 1. Race/Ethnicity of People Fully Vaccinated
 2. Age Groups of People Fully Vaccinated
 3. Sex of People Fully Vaccinated
