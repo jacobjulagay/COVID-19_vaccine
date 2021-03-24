@@ -17,7 +17,7 @@ In order to obtain the 3 datasets below, I had to use Selenium because these dat
 3. Sex of People Fully Vaccinated
 
 ### DFD
-![Github Logo]/(/dfd.png)
+[Github Logo](dfd.png)
 
 ## Built With
 * Python
