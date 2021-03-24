@@ -1,9 +1,9 @@
 ## About The Project
-The goal of this project is to find insights about the Covid-19 vaccine distribution and demographic. I will be talking about how I automated the extraction of data from the CDC Website and Github. 
+The goal of this project is to find insights about the Covid-19 vaccine distribution and demographic. Below is an explanation of how I automated the extraction of data from different data sources.
 
-In order to store all of this data, I used MySQL. Since I am working with a team, I wanted all of us to have the same database. So I decided to learn how to host our MySQL Server onto AWS using their Relational Database Service (RDS).
+The database I used was MySQL. I decided to our host our teams database with AWS using their Relational Database Service (RDS).
 
-Once, everyone is connected to AWS, we then connect to a data visualiztion software like Tableau or Power BI to find insights within the data. 
+Once everyone is connected to AWS, we then connected to a data visualiztion software called Tableau to create dashboards. 
 
 I used Python, Pandas, and SqlAlchemy in order fetch data from the CDC API. Once I pulled the data, I converted the datasets into separate dataframes. After, I used the '.to_sql' function in the Pandas library to convert the dataframes to MySQL Tables and connected them to my AWS Server. 
 3 datasets from the CDC API: 
@@ -27,4 +27,3 @@ In order to obtain the 3 datasets below, I had to use Selenium because these dat
 * MySQL
 * AWS RDS (Relational Database Service )
 * Tableau 
-* PowerBI
