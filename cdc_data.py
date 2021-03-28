@@ -6,6 +6,7 @@ import credentials
 # Credentials for AWS
 un = credentials.login['username']
 pw = credentials.login['pw']
+endpoint = credentials.login['endpoint']
 
 # Unauthenticated client only works with public data sets. Note 'None'
 # in place of application token, and no username or password:
@@ -40,7 +41,7 @@ sex_of_people_fully_vaccinated_df = pd.read_csv('C:\\Users\\jacob\\Documents\\Ta
 
 # Connecting to server w/ sqlalchemy
 # Transforming DataFrames to MySQL Tables
-engine = create_engine('mysql://{}:{}@db-covid-vaccine.crr2giy3ogcs.us-west-1.rds.amazonaws.com/covidvaccine'.format(un,pw))
+engine = create_engine('mysql://{}:{}@{}'.format(un,pw,endpoint))
 pfizer_results_df2.to_sql('pfizer_vaccine', con = engine, if_exists= 'append', index = False)
 jj_results_df2.to_sql('jj_vaccine', con = engine, if_exists= 'append', index = False)
 moderna_results_df2.to_sql('moderna_vaccine', con = engine, if_exists= 'append', index = False)
