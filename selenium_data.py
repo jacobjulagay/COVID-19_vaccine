@@ -7,7 +7,6 @@ from selenium.webdriver.common.keys import Keys
 
 # Add google chrome download preferences to choose where the files will be stored when downloaded.
 options = webdriver.ChromeOptions()
-# Needed to change path and add two backslashes instead. 
 prefs = {'download.default_directory': 'C:\\Users\\jacob\\Documents\\Talent_Path\\Covid-Vaccine-Project'}
 options.add_experimental_option('prefs',prefs)
 
@@ -51,10 +50,5 @@ try:
 finally:
     browser.close()
 
-
-
-# re_fully_vaccinated_bttn = browser.find_element_by_xpath('//*[@id="demo-export040"]').send_keys(Keys.ENTER)
-# data_re_fully_vaccinated_bttn = browser.find_element_by_id('//*[@id="dwn-data-040"]').send_keys(Keys.ENTER)
-# print('Testings', re_fully_vaccinated_bttn)
 
 
