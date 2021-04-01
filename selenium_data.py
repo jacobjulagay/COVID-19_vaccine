@@ -7,18 +7,21 @@ from selenium.webdriver.common.keys import Keys
 
 # Add google chrome download preferences to choose where the files will be stored when downloaded.
 options = webdriver.ChromeOptions()
+# Needed to change path and add two backslashes instead. 
 prefs = {'download.default_directory': 'C:\\Users\\jacob\\Documents\\Talent_Path\\Covid-Vaccine-Project'}
 options.add_experimental_option('prefs',prefs)
 
+driver_path = 'C:\\Users\\jacob\\Documents\\Talent_Path\\Covid-Vaccine-Project\\chromedriver'
 # Path to your webdriver
-browser = webdriver.Chrome('C:\\Users\\jacob\\Documents\\Talent_Path\\Covid-Vaccine-Project\\chromedriver',options=options)
-browser.implicitly_wait(10)
+browser = webdriver.Chrome(driver_path,options=options)
+# Open website
 browser.get('https://covid.cdc.gov/covid-data-tracker/#vaccination-demographic')
 
-#Using wait because the elements did not load yet. 
+
+#Using wait because the DOM has not all elements yet. 
 #Explicit Wait - Waits until condition is met 
 try:
-    # Race Ethnicity
+    # Race Ethnicity--------------------------------------------------------
     re_fully_vaccinated_bttn = WebDriverWait(browser, 10).until(
         EC.presence_of_element_located((By.XPATH, '//*[@id="demo-export040"]'))
     )
@@ -28,7 +31,7 @@ try:
     )
     data_re_fully_vaccinated_bttn.send_keys(Keys.ENTER)
 
-    #Age Group
+    #Age Group--------------------------------------------------------------
     age_fully_vaccinated_bttn = WebDriverWait(browser, 10).until(
         EC.presence_of_element_located((By.XPATH, '//*[@id="demo-export010"]'))
     )
@@ -38,7 +41,7 @@ try:
     )
     data_age_fully_vaccinated_bttn.send_keys(Keys.ENTER)
 
-    #Sex group
+    # Sex group--------------------------------------------------------------
     sex_fully_vaccinated_bttn =  WebDriverWait(browser, 10).until(
         EC.presence_of_element_located((By.XPATH, '//*[@id="demo-export009"]'))
     )
