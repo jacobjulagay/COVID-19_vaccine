@@ -21,6 +21,9 @@ Source: [Covid-19 Vaccinations in the US - Demographic ](https://covid.cdc.gov/c
 ### DFD
 ![testing](dfd.png)
 
+### Tableau Dashboard
+![dashboard](covid-19-vaccine-distribution.png)
+
 ## Technologies
 * Python
   * Selenium
