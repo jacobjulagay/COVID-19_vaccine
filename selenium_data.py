@@ -20,36 +20,30 @@ browser.get('https://covid.cdc.gov/covid-data-tracker/#vaccination-demographic')
 
 #Using wait because the DOM has not all elements yet. 
 #Explicit Wait - Waits until condition is met 
+wait = WebDriverWait(browser,10)
 try:
     # Race Ethnicity--------------------------------------------------------
-    re_fully_vaccinated_bttn = WebDriverWait(browser, 10).until(
+    re_fully_vaccinated_bttn = wait.until(
         EC.presence_of_element_located((By.XPATH, '//*[@id="demo-export040"]'))
-    )
-    re_fully_vaccinated_bttn.send_keys(Keys.ENTER)
-    data_re_fully_vaccinated_bttn = WebDriverWait(browser, 10).until(
+    ).click()
+    data_re_fully_vaccinated_bttn = wait.until(
         EC.presence_of_element_located((By.XPATH, '//*[@id="dwn-data-040"]'))
-    )
-    data_re_fully_vaccinated_bttn.send_keys(Keys.ENTER)
-
+    ).click()
     #Age Group--------------------------------------------------------------
-    age_fully_vaccinated_bttn = WebDriverWait(browser, 10).until(
+    age_fully_vaccinated_bttn = wait.until(
         EC.presence_of_element_located((By.XPATH, '//*[@id="demo-export010"]'))
-    )
-    age_fully_vaccinated_bttn.send_keys(Keys.ENTER)
-    data_age_fully_vaccinated_bttn = WebDriverWait(browser, 10).until(
+    ).click()
+    data_age_fully_vaccinated_bttn = wait.until(
         EC.presence_of_element_located((By.XPATH, '//*[@id="dwn-data-010"]'))
-    )
-    data_age_fully_vaccinated_bttn.send_keys(Keys.ENTER)
+    ).click()
 
     # Sex group--------------------------------------------------------------
-    sex_fully_vaccinated_bttn =  WebDriverWait(browser, 10).until(
+    sex_fully_vaccinated_bttn =  wait.until(
         EC.presence_of_element_located((By.XPATH, '//*[@id="demo-export009"]'))
-    )
-    sex_fully_vaccinated_bttn.send_keys(Keys.ENTER)
-    data_sex_fully_vaccinated_bttn =  WebDriverWait(browser, 10).until(
+    ).click()
+    data_sex_fully_vaccinated_bttn =  wait.until(
         EC.presence_of_element_located((By.XPATH, '//*[@id="dwn-data-009"]'))
-    )
-    data_sex_fully_vaccinated_bttn.send_keys(Keys.ENTER)
+    ).click()
 finally:
     browser.close()
 
