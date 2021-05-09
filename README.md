@@ -1,11 +1,14 @@
 ## About the Project
-The goal of this project is to find insights about the Covid-19 vaccine distribution and demographic. Below is an explanation of how I automated the extraction of data.
+The goal of this project is to find insights about the Covid-19 vaccine distribution and demographic.
 
 The database I used was MySQL. I decided to host our teams database with AWS using their Relational Database Service (RDS).
 
 Once connected to AWS, we then connect to Tableau to visualize our data. 
 
 I used Python, Pandas, and SqlAlchemy in order fetch data from the CDC API. Once I pulled the data, I converted the datasets into separate dataframes. Afterwards, I used the '.to_sql' function in the Pandas library to convert the dataframes to MySQL Tables, then connected the tables to my AWS.
+
+Tableau Dashboard:
+https://public.tableau.com/profile/jacob.julag.ay#!/vizhome/VaccineProjection_16176726407480/Dashboard1
 
 3 datasets from the CDC API: 
 1. J&J Vaccine Results - [Dataset](https://data.cdc.gov/Vaccinations/COVID-19-Vaccine-Distribution-Allocations-by-Juris/w9zu-fywh)
